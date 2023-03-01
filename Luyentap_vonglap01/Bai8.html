@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="demo">Bat dau</button>
+<script>
+    let btn = document.getElementById("demo");
+    btn.addEventListener('click', myfunction);
+    function myfunction(){
+        let num = prompt("So ban muon doan trong khoang la: ");
+        let numran = Math.floor(Math.random() * num);
+        let num_check = prompt ("Nhap so ban doan");
+        let count = 0;
+        while (num_check !== numran){
+            count++;
+            if(count == 3){
+            alert("Ban da het so lan doan");
+            break;
+        }else if(num_check > numran ){
+            alert("Số bạn đoán lớn hơn");
+        }else {
+            alert("Số bạn đoán nhỏ hơn");
+        }
+        num_check = prompt("Nhập số bạn đoán");
+    }
+    if(count == 3){
+        alert("Bạn đã hết vị");
+    }else {
+        alert("Bạn trúng 100 củ rồi nhé. Chúc mừng bạn!")
+    }
+    }
+</script>
+</body>
+</html>
